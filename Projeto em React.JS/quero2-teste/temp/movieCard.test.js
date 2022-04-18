@@ -22,12 +22,6 @@ test('contém uma imagem de poster', () => {
 
 test('contém o título do filme', () => {
     render(<MovieCard />);
-    const poster = screen.getByRole(/titulo/i);
-    expect(poster).toBeInTheDocument
-});
-
-test('contém o título do filme', () => {
-    render(<MovieCard />);
     const titulo = screen.getByRole(/titulo/i);
     expect(titulo).toBeInTheDocument
 });

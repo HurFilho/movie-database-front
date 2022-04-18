@@ -1,15 +1,18 @@
 import { render, screen } from '@testing-library/react';
-import Header from './header';
+import { Header } from './header';
 
-test('contém o background do header', () => {
-    render(<SearchBar />);
-    const background = screen.getByRole(/background/i);
-    expect(background).toBeInTheDocument();
-});
+describe('testes do header', () => {
+    test('contém o background do header', () => {
+        render(<Header />);
+        const background = screen.getByRole(/header/i);
+        expect(background).toBeInTheDocument();
+    });
 
-test('o estilo do background está correto', () => {
-    render(<Header />);
-    const text = screen.getByRole(/container/i);
-    expect(text).toHaveStyle(("background-color: #000000; align-items: center, max-height: 160px"));
-});
+    test('o estilo do background está correto', () => {
+        render(<Header />);
+        const background = screen.getByRole(/header/i);
+        expect(background).toHaveStyle
+            (("background-color: #000000; margin: 0; text-align: -webkit-center; padding: 1rem; display: block; max-height: 160px;"));
+    });
+})
 
