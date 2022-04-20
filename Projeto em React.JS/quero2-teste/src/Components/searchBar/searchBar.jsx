@@ -1,12 +1,10 @@
 import { useState } from "react"
-import { InputGroup, SearchButton, SearchInput } from "./searchBarComponents"
+import { InputGroup, SearchInput, SearchButton } from './styles'
 
 export const SearchBar = () => {
     const [searchedString, setSearchedString] = useState("")
-
     return (
         <>
-
             <InputGroup>
                 <SearchButton onClick={() => console.log(searchedString)}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"

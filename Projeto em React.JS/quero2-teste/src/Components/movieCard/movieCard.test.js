@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import MovieCard from './movieCard';
+import { MovieCard } from './movieCard';
 
 test('contém o background do card', () => {
     render(<MovieCard />);
@@ -11,12 +11,17 @@ test('o estilo do background está correto', () => {
     render(<MovieCard />);
     const background = screen.getByRole(/background/i);
     expect(background).toHaveStyle
-        (("border-radius: 0 60px 0 0; max-height: 200px; background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);"));
+        ((`margin: 1rem; min-width: 500px; background: rgb(0,0,0);
+        background: -moz-linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+        background: -webkit-linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+        background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%); 
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#000000",GradientType=1);
+        border-radius: 0 40px 0 0;`));
 });
 
 test('contém uma imagem de poster', () => {
     render(<MovieCard />);
-    const poster = screen.getByRole(/poster/i);
+    const poster = screen.getByRole(/poster-movie/i);
     expect(poster).toBeInTheDocument
 });
 
