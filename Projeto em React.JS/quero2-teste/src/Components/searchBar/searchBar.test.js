@@ -1,5 +1,5 @@
-import { render, screen } from '@testing-library/react';
-import { SearchBar } from './searchBar';
+import { render, screen } from '@testing-library/react'
+import { SearchBar } from './searchBar'
 
 describe('testa a barra de pesquisa', () => {
     test('contém o elemento input de busca', () => {

@@ -25,3 +25,10 @@ outline: none;
 color: #CCCCCC;
 background-color: inherit;}`
 
+export const Header = styled.section.attrs(() => ({ className: 'row', role: 'header' }))`
+background-color: black;
+margin: 0;
+padding: 1rem;
+display: flex;
+justify-content: center;
+max-height: 160px;`

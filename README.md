@@ -12,6 +12,9 @@ Este projeto será desenvolvido utilizando as seguintes tecnologias:
 # Dependencias
 
 * The Movie Database (TMDB) API - responsável por prover os dados sobre a lista de filmes, disponível em https://developers.themoviedb.org/3/
+* Bootstrap stylesheet
+* Bootstrap bundle (plugin and dependency)
+* Axios connector
 
 # Descrição
 

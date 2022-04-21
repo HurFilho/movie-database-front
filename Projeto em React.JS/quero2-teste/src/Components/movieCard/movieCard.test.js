@@ -1,5 +1,5 @@
-import { render, screen } from '@testing-library/react';
-import { MovieCard } from './movieCard';
+import { render, screen } from '@testing-library/react'
+import { MovieCard } from './movieCard'
 
 test('contém o background do card', () => {
     render(<MovieCard />);
@@ -14,7 +14,7 @@ test('o estilo do background está correto', () => {
         ((`margin: 1rem; min-width: 500px; background: rgb(0,0,0);
         background: -moz-linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
         background: -webkit-linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
-        background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%); 
+        background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
         filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#000000",GradientType=1);
         border-radius: 0 40px 0 0;`));
 });
@@ -45,7 +45,7 @@ test('contém a data de lançamento do filme', () => {
 
 test('contém a label "Sinopse"', () => {
     render(<MovieCard />);
-    const label = screen.getByText(/sinopse/i);
+    const label = screen.findByText(/sinopse/i);
     expect(label).toBeInTheDocument
 });
 
