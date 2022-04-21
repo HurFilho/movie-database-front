@@ -17,7 +17,6 @@ export const Pagination = (props) => {
                                 <PageNumber
                                     key={item.pageNumber}
                                     value={item.pageNumber}
-                                    // onClick={(e) => props.action(e.target.value)}>
                                     onClick={(e) => props.action(e.target.value.toString())}>
                                     {item.pageNumber}
                                 </PageNumber>

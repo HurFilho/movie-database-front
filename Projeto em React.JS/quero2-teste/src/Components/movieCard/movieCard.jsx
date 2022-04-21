@@ -6,7 +6,11 @@ export const MovieCard = (props) => {
         <Card>
             <Container>
                 <MoviePoster src={
-                    props.movie ? imgBaseUrl + props.movie.poster_path : require('../../null.jpg')} />
+                    props.movie ?
+                        props.movie.poster_path ?
+                            imgBaseUrl + props.movie.poster_path :
+                            require('../../null.jpg') :
+                        require('../../null.jpg')} />
                 <InfoContainer>
                     <Title>{props.movie ? props.movie.title : ''}</Title>
                     <Label>Data de lançamento:</Label>

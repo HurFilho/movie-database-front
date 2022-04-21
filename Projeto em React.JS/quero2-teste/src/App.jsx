@@ -13,13 +13,18 @@ export const App = () => {
       .then((response) => setMoviesList(response.data))
       .catch((err) => { console.error('Um erro ocorreu enquanto buscando a lista de filmes.' + err) })
   }
-  const LoadMovies = () => {
-    useEffect(() => { goToPage() }, [])
+  const LoadMovies = () => { useEffect(() => { goToPage() }, []) }
+
+  const searchMovies = (searchedTerms) => {
+    TMDB
+      .get(createRequest.searchMovies(searchedTerms))
+      .then((response) => setMoviesList(response.data))
+      .catch((err) => { console.error('Um erro ocorreu enquanto buscando a lista de filmes.' + err) })
   }
   const [moviesList, setMoviesList] = useState(LoadMovies())
   return (
     <>
-      <SearchBar />
+      <SearchBar action={searchMovies} />
       <div className="row" style={{ width: '100%', margin: '0 0 4em 0' }}>
         {moviesList ? moviesList.results.map((item) => <MovieCard key={item.id} movie={item} />) : void 0}
       </div>
