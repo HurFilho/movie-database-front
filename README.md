@@ -2,6 +2,8 @@ Este projeto foi desenvolvido como teste para uma vaga de desenvolvedor Frontend
 
 # Resumo
 
+Projeto compilado disponível em https://teste-quero2-hur.netlify.app
+
 Este projeto foi desenvolvido utilizando as seguintes tecnologias:
 
 * Figma: https://www.figma.com/file/ijg7CajB4VrUf4zIhacDl9/Movie-list---Teste-Quero-2?node-id=0%3A1
