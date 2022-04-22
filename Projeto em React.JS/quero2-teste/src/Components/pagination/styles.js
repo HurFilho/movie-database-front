@@ -14,6 +14,10 @@ cursor: pointer;
 &:hover {
     color: #CCCCCC;
     font-weight: 700;
+};
+@media only screen and (max-width: 36rem) {
+margin: .4em .1em .1em .4em; 
+font-size: 12pt;   
 };`
 
 export const Footer = styled.footer.attrs(() => ({ className: 'row' }))`

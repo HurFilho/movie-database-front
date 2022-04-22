@@ -3,7 +3,7 @@ import axios from 'axios'
 const api_key = 'fe65f8e840e15d06c5c00bf13084da74'
 const language = 'pt-BR'
 
-export const TMDB = axios.create({
+export const Tmdb = axios.create({
   baseURL: `https://api.themoviedb.org/3`
 })
 

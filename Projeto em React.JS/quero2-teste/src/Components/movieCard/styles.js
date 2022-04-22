@@ -1,5 +1,11 @@
 import styled from 'styled-components'
 
+export const Main = styled.main.attrs(() => ({
+    className: 'row'
+}))`
+width: 100%;
+margin: 0 0 4em 0;`
+
 export const Card = styled.article.attrs(() => ({ className: 'col' }))`
 padding: 0;`
 
@@ -34,4 +40,7 @@ color: white;
 margin: 0 2em .5em 0;`
 
 export const Sinopse = styled.p.attrs(() => ({ role: 'sinopse' }))`
-color: white;`
+color: white;
+@media only screen and (max-width: 36rem) {
+font-size: 10pt;    
+};`

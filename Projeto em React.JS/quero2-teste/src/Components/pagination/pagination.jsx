@@ -1,11 +1,7 @@
-import { useState, useEffect } from 'react'
 import { PageList, PageNumber, Footer } from './styles'
 
 export const Pagination = (props) => {
-    const [pageNumbers, setPageNumbers] = useState()
-    useEffect(() => {
-        setPageNumbers(preparePages(props.total_pages, props.actual_page))
-    }, [])
+    const pageNumbers = preparePages(props.total_pages, props.actual_page)
     return (
         <>
             <nav>
@@ -17,7 +13,9 @@ export const Pagination = (props) => {
                                 <PageNumber
                                     key={item.pageNumber}
                                     value={item.pageNumber}
-                                    onClick={(e) => props.action(e.target.value.toString())}>
+                                    onClick={(e) => {
+                                        props.action(e.target.value.toString())
+                                    }}>
                                     {item.pageNumber}
                                 </PageNumber>
                         ) : void 0}
