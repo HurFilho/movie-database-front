@@ -1,5 +1,3 @@
-Este projeto foi desenvolvido como teste para uma vaga de desenvolvedor Frontend para a empresa Quero 2
-
 # Resumo
 
 Projeto compilado disponível em https://teste-quero2-hur.netlify.app
