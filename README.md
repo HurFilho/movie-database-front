@@ -1,5 +1,8 @@
 # Resumo
 
+Projeto desenvolvido para conectar à API do The Movie Database (TMDB), exibir os filmes em uma página e fornecer opções de busca de filmes e paginação.
+Projeto desenvolvido utilizando React.JS.
+
 Projeto compilado disponível em https://teste-quero2-hur.netlify.app
 
 Este projeto foi desenvolvido utilizando as seguintes tecnologias:
